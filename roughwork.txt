@@ -1,0 +1,92 @@
+html
+
+       <div class="testimonial-container">
+                <div class="testimonial-wrapper">
+                  <div class="testimonial-item">
+                    <h4 class="user-name">User 1</h4>
+                    <p class="message">"This is a wonderful collection!"</p>
+                  </div>
+                  <div class="testimonial-item">
+                    <h4 class="user-name">User 2</h4>
+                    <p class="message">"EOSCOUTURE defines elegance."</p>
+                  </div>
+                  <div class="testimonial-item">
+                    <h4 class="user-name">User 3</h4>
+                    <p class="message">"I absolutely love their designs!"</p>
+                  </div>
+                  <!-- Add more testimonials -->
+                </div>
+              </div>
+
+css
+
+/* page 4 style */
+#main #page-4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(255, 242, 171); */
+}
+.testimonial-container {
+    width: 70%;
+    overflow: hidden; /* Hides overflow */
+  }
+  
+  .testimonial-wrapper {
+    display: flex; /* Horizontal layout */
+  }
+  
+  .testimonial-item {
+    min-width: 300px;
+    margin-right: 20px;
+    color: white;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: start;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .message {
+    font-style: italic;
+  }
+
+js
+
+// Testimonials 
+// Select testimonial wrapper and items
+const wrapper = document.querySelector('.testimonial-wrapper');
+const items = document.querySelectorAll('.testimonial-item');
+
+// Clone all testimonials to create a seamless loop
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  wrapper.appendChild(clone);
+});
+
+// GSAP infinite scrolling animation
+let scrollSpeed = 25;  // Adjust scrolling speed (lower is slower)
+let testimonialWidth = wrapper.scrollWidth ; // Divide by 2 because we cloned
+
+let scrollAnimation = gsap.to(wrapper, {
+  xPercent: -100,     // Moves the wrapper to the left (100%)
+  ease: "none",       // Linear scrolling
+  repeat: -1,         // Infinite loop
+  duration: scrollSpeed, // Adjust speed of the scroll
+  modifiers: {
+    xPercent: gsap.utils.wrap(-100, 0) // Wrapping ensures seamless scrolling
+  }
+});
+
+// Pause scrolling on hover
+wrapper.addEventListener('mouseenter', () => {
+  scrollAnimation.pause();
+});
+
+// Resume scrolling when mouse leaves
+wrapper.addEventListener('mouseleave', () => {
+  scrollAnimation.resume();
+});

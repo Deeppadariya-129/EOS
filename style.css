@@ -1,0 +1,404 @@
+@font-face {
+    font-family: futura ;
+    src: url("Futura-Bold.ttf");
+}
+
+@font-face {
+    font-family: Helvetica ;
+    src: url("HelveticaNowText-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#preloader{
+    background: rgb(183, 183, 183) url("images/lodinganimation.gif") no-repeat center;
+    background-size: 8%;
+    opacity: 0.6;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+#main {
+    padding: 0 3vw;
+    background-color: #F7F7F7;
+}
+
+
+/* #page-1 Style  */
+#main #page-1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    user-select: none;
+    /* background-color: red; */
+}
+#main #page-1 nav {
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main #page-1 nav .left img{
+    height: 125px;
+    width: 125px;
+}
+#main #page-1 nav .right a{
+    text-decoration: none;
+    font-family: Helvetica;
+    color: black;
+    padding: 0 20px;
+    /* background-color: aqua; */
+}
+#main #page-1  .mainarea {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 80px;
+}
+#main #page-1  .mainarea h1{
+    font-family: futura;
+    font-size: 11vw;
+}
+#main #page-1  .mainarea h4{
+    font-family: helvetica;
+    font-size: 1vw;
+    letter-spacing: 3px;
+}
+
+
+/* #page-2 Style  */
+#main #page-2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    /* background-color: red; */
+}
+#main #page-2 .herotext{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+#main #page-2 .herotext h2{
+    margin-top: 15px;
+    font-family: futura;
+    font-size: 5vw;
+    /* font-weight: bold; */
+    /* letter-spacing: 3px; */
+}
+#main #page-2 .herotext h4{
+    width: 700px;
+    margin-bottom: 10px;
+    font-family: helvetica;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+#main #page-2 .videocontainer{
+    width: 40%;
+    height: 550px;
+} 
+#main #page-2 .videocontainer video{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 3px solid #ffc934;
+    /* background: rgba(0, 128, 0, 0.251); */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* #page-3 Style  */
+#main #page-3 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(255, 242, 171); */
+}
+#main #page-3 .herotext-three{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#main #page-3 .herotext-three h2{
+    margin-top: 15px;
+    font-family: futura;
+    font-size: 2vw;
+    /* font-weight: bold; */
+    /* letter-spacing: 3px; */
+}
+#main #page-3 .herotext-three h4{
+    margin-bottom: 30px;
+    font-family: helvetica;
+    font-size: 1vw;
+    letter-spacing: 2px;
+}
+#main #page-3 .main-container{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+#main #page-3 .inner-container{
+    margin-left: 10px;
+    width: 50%;
+    height: 70vh;
+    background-color: #ffc934;
+    border-radius: 10px;
+    flex: 1;
+    filter: grayscale(1);
+    transition: flex 0.4s ease-in-out;
+}
+#main #page-3 .active{
+    flex: 2;
+    filter: grayscale(0);
+}
+#main #page-3 .inner-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: no-repeat;
+    border-radius: 10px;
+}
+/* After geting photo add through css or html here  */
+#main #page-3 .btn-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+}
+#main #page-3 .btn-one button{
+    padding: 20px 30px;
+    width: 300px;
+    background-color: transparent;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: 500;
+    border:2px solid black;
+    border-radius: 40px;
+    transition:  0.5s ease-in-out;
+}
+#main #page-3 .btn-one button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border:2px solid black;
+}
+
+
+/* Page-4 */
+#main #page-4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(255, 221, 26); */
+}
+#main #page-4 .main-four{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 150px; */
+}
+#main #page-4 .herotext-four{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#main #page-4 .herotext-four h2{
+    margin-top: 120px;
+    font-family: futura;
+    font-size: 2vw;
+    /* font-weight: bold; */
+    /* letter-spacing: 3px; */
+}
+#main #page-4 .herotext-four h4{
+    font-family: helvetica;
+    font-size: 1vw;
+    letter-spacing: 2px;
+}
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 194px;
+  }
+  
+.slider-group {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+  
+.slider-item {
+    display: inline-block;
+    width: 400px;
+    height: 90px;
+    margin: 0 10px;
+    background-color: #F0BB91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+}
+
+.slider-left {
+    position: absolute;
+    top: 38%;
+}
+  
+.slider-right {
+    position: absolute;
+    top: 58%;
+}
+
+
+/* Page 5 style */
+#main #page-5 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(255, 242, 171); */
+}
+#main #page-5  .up{
+    margin-bottom: 50px;
+}
+#main #page-5  .up h1{
+    font-family: futura;
+    font-size: 6vw;
+    text-transform: uppercase;
+}
+#main #page-5 .up p{
+    font-family: helvetica;
+    font-size: 1.1vw;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+#main #page-5 .down {
+    width: 100%;
+    background-color: black;
+    height:calc(100vh - 50px - 250px);
+    border-radius: 10px;
+    display: flex;
+    padding: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#main #page-5 .down .first{
+    width: 30%;
+    height: 300px;
+    /* background-color: #ffc934; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#main #page-5 .down .first img{
+    height: 100px;
+    width: 100px;
+}
+#main #page-5 .down .first .socilas i {
+    color: #F7F7F7;
+    font-size: 32px;
+    margin: 0 10px;
+}
+#main #page-5 .down .second{
+    width: 30%;
+    height: 300px;
+    color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: #ffd561; */
+}
+#main #page-5 .down .second .location{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+#main #page-5 .down .second i{
+    color: #F7F7F7;
+    font-size: 32px;
+}
+#main #page-5 .down .second p{
+    color: #F7F7F7;
+    font-family: Helvetica, sans-serif;
+}
+#main #page-5 .down .second h1{
+    color: #F7F7F7;
+    font-family: futura;
+    font-size: 20px;
+}
+#main #page-5 .down .second .location a{
+    text-decoration: none;
+}
+#main #page-5 .down .second .phone{
+    color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+#main #page-5 .down .second .email  {
+    color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+#main #page-5 .down .third{
+    width: 30%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    /* background-color: #fff0c6; */
+}
+#main #page-5 .down .third  h1{
+    color: #F7F7F7;
+    font-family: futura;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#main #page-5 .down .third a{
+    text-decoration: none;
+    font-family: Helvetica;
+    color: #F7F7F7;
+    margin-bottom: 12px;
+    /* background-color: aqua; */
+}
+#main #page-5 .cpr{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 45px;
+}
